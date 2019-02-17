@@ -32,7 +32,7 @@ namespace Serenity
 
         static void Opening()
         {
-            //use of lists
+            //use of advanced lists
             List<string> title = ASCII_Art.Title();
             foreach (string Title_Line in title)
             {
@@ -160,6 +160,7 @@ namespace Serenity
                         else if (input == "pull leaver 3")
                         {
                             Console.WriteLine("arrows start to shoot out of the walls and celing \nit's only a matter of time before they get you");
+                            //use of lists
                             List<string> Died = ASCII_Art.Skull();
                             foreach (string Skull_line in Died)
                             {
@@ -321,6 +322,7 @@ namespace Serenity
             if ("kill self" == instruction)
             {
                 List<string> Died = ASCII_Art.Skull();
+                //use of lists
                 foreach(string Skull_line in Died)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;

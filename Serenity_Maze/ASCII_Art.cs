@@ -54,9 +54,6 @@ namespace Serenity
             Title.Add("");
             return Title;           
         }
-
-        ///
-
     }
 }
  

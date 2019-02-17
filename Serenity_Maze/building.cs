@@ -10,7 +10,6 @@ namespace Serenity
     {
         public Building(string name)
         {
-
             Rooms = new List<Room>();
             Name = name;
 
@@ -27,7 +26,7 @@ namespace Serenity
 
             Rooms.Add(new Room(1, -1, 1, "impossible room", true, true, true, true, true));
 
-            
+//advanced list usage for etire section
             #region FloorOne
             Rooms.Add(new Room(1, 0, 1, "The tavern is grimy, with cobwebs everywhere. A wizened old man is slumped over a table but he perks up as you approach and says 'I think you need to go through the door like all the other adventurers did! Let me know if you find anyone!!'. He then returns to his drink and is forgotten about by everyone.", true, false, false, false, false));
             //row 0
