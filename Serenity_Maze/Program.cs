@@ -138,7 +138,7 @@ namespace Serenity
                 case 1:
                     bool SimpleIsFinished = false;
                     string decription = currentRoom.Description;
-                    decription += ("\nthere are 3 leavers, with the numbers 1-3 writen above them in glowing runes");
+                    decription += ("\nthere are 3 levers, with the numbers 1-3 writen above them in glowing runes");
                     int x = 1;
                     do
                     {
@@ -153,11 +153,11 @@ namespace Serenity
                         {
                             Console.WriteLine(decription.ToUpper());
                         }
-                        else if (input =="pull leaver 1")
+                        else if (input =="pull lever 1")
                         {
                             Console.WriteLine("5 dead snakes fall out of a shoot in the cealing");
                         }
-                        else if (input == "pull leaver 3")
+                        else if (input == "pull lever 3")
                         {
                             Console.WriteLine("arrows start to shoot out of the walls and celing \nit's only a matter of time before they get you");
                             //use of lists
@@ -171,11 +171,11 @@ namespace Serenity
                             Console.Clear();
                             Main();
                         }
-                        else if (input == "pull leaver" || input == "Pull corect leaver")
+                        else if (input == "pull lever" || input == "Pull corect lever")
                         {
                             Console.WriteLine("it's not that easy");
                         }
-                        else if (input == "pull leaver 2")
+                        else if (input == "pull lever 2")
                         {
                             Console.WriteLine("well done the doors are now unlocked");
                             SimpleIsFinished = true;
@@ -322,7 +322,6 @@ namespace Serenity
             if ("kill self" == instruction)
             {
                 List<string> Died = ASCII_Art.Skull();
-                //use of lists
                 foreach(string Skull_line in Died)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
