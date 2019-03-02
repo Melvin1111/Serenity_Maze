@@ -43,8 +43,6 @@ namespace Serenity
         }
         static void CharacterCreation()
         {
-            
-            
             string Name = Console.ReadLine();
         }
 
