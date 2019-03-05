@@ -420,6 +420,20 @@ namespace Serenity
                 WhatNext(newRoom, player1);
             }
 
+            if ("go test" == instruction && currentRoom.Zcoord == 1)
+            {
+                Console.WriteLine("You go to the Test chamber.");
+                int newX = 3;
+                int newY = 3;
+                int newZ = 2;
+                Room newRoom = Building.GetRoom(newX, newY, newZ);
+                player1.CurrentX = newX;
+                player1.CurrentY = newY;
+                player1.CurrentZ = newZ;
+                SavePlayer(player1);
+                WhatNext(newRoom, player1);
+            }
+
             if ("look" == instruction) 
             {
                 Console.WriteLine(northDoor.IsExists ? "There is a door in the north wall" : "The north wall is blank");
@@ -436,6 +450,18 @@ namespace Serenity
                 Console.ForegroundColor = ConsoleColor.White;
                 WhatNext(currentRoom, player1);
             }
+            if ("help" == instruction)
+            {
+                Console.WriteLine("The valid commands are:");
+                Console.WriteLine("-----------------------");
+                List<string> valid = IsValid();
+                foreach(var item in valid)
+                {
+                    Console.WriteLine("{0}\t", item);
+                }
+                Console.WriteLine("-----------------------");
+                WhatNext(currentRoom, player1);
+            }
             else
             {
                 Console.WriteLine("Sorry you can't do that!!");
@@ -444,10 +470,28 @@ namespace Serenity
 
         }
 
+        public static List<string> IsValid ()
+        {
+            //list operations
+            List<string> valid = new List<string>();
+            valid.Add("help");
+            valid.Add("go north");
+            valid.Add("go south");
+            valid.Add("go west");
+            valid.Add("go east");
+            valid.Add("look");
+            valid.Add("use ladder");
+            valid.Add("attack");
+            valid.Add("desc");
+
+            return valid;
+        }
+
         public static bool IsValid(string instruction)
         {
             //list operations
             List<string> valid = new List<string>();
+            valid.Add("help");
             valid.Add("go north");
             valid.Add("go south");
             valid.Add("go west");
@@ -460,6 +504,8 @@ namespace Serenity
             var match = valid.Where(x => x == instruction);
             return (match != null) ? true : false;
         }
+
+
         public static NonPlayer GetnonPlayerDetails()
         {
             string playerName = ("Knight");

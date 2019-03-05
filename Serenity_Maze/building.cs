@@ -30,7 +30,7 @@ namespace Serenity
             #region FloorOne
             Rooms.Add(new Room(1, 0, 1, "The tavern is grimy, with cobwebs everywhere. A wizened old man is slumped over a table but he perks up as you approach and says 'I think you need to go through the door like all the other adventurers did! Let me know if you find anyone!!'. He then returns to his drink and is forgotten about by everyone.", true, false, false, false, false));
             //row 0
-            Rooms.Add(new Room(1, 1, 1, "the room is old with crumbling floor boards and stone brick walls", true, true, false, true, false));
+            Rooms.Add(new Room(1, 1, 1, "", true, true, false, true, false));
             Rooms.Add(new Room(2, 1, 1, "the room is moldy the floorboards are damp and the brick walls are mossy", false, true, true, false, false));
             Rooms.Add(new Room(3, 1, 1, "the room is very old with walls bowing in on all sides, a few crumbling stones litter the floor. be carefull not to slip", true, false, true, false, false));
             Rooms.Add(new Room(4, 1, 1, "Somehow its raining in here there is no floor either so you better swim", true, true, false, false, false));
