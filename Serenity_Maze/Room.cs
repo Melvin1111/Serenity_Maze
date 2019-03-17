@@ -31,25 +31,25 @@ namespace Serenity
             bool tavern = (1 == x && 0 == y && 1 == z) ? true : false;
             bool corridor = (1 == x && 1 == y && 1 == z) ? true : false;
 
-            //if (!tavern && !corridor)
-            //{
-            //    Thread.Sleep(50);
-            //    Console.Write("|");
-            //    if (true == IsFight())
-            //    {
-            //        Puzzle = false;
-            //        Fight = true;
-            //    }
+            if (!tavern && !corridor)
+            {
+                Thread.Sleep(50);
+                Console.Write("|");
+                if (true == IsFight())
+                {
+                    Puzzle = false;
+                    Fight = true;
+                }
 
-            //    if (false == Fight)
-            //    {
-            //        if (true == IsPuzzle())
-            //        {
-            //            Puzzle = true;
-            //            PuzzleType = GetPuzzleType();
-            //        }
-            //    }
-            //}
+                if (false == Fight)
+                {
+                    if (true == IsPuzzle())
+                    {
+                        Puzzle = true;
+                        PuzzleType = GetPuzzleType();
+                    }
+                }
+            }
         }
 
         public Room()

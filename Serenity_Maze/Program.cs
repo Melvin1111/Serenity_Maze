@@ -7,7 +7,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Threading;
 
-
+        
 namespace Serenity
 {
     class Program
@@ -55,8 +55,6 @@ namespace Serenity
             Player player1 = new Player(playerName);
             return player1;
         }
-            
-        
 
         public static void BuildDatabase()
         {
@@ -124,7 +122,7 @@ namespace Serenity
 
             WhatNext(newRoom, player1);
 
-        }
+        }   
         #region Puzzles
         public static void Puzzle(Player player1, Room currentRoom)
         {
